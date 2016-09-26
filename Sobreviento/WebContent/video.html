@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+<title>Sobreviento</title>
+<link rel="stylesheet" href="css/jquery.mb.YTPlayer.min.css" type="text/css">
+<style type="text/css">
+body {
+	background-image: url(img/loading.gif);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+#enter {
+	position: fixed;
+	height: 87px;
+	display: block;
+	width: 100%;
+	z-index: 9;
+	text-align: right;
+	bottom: 50px;
+	right: 20px;
+}
+</style>
+
+</head>
+<body>
+
+	<div>
+
+		<!--Player-->
+		<a id="bgndVideo" class="player"
+			data-property="{videoURL:'WnSKTTaL2pA',containment:'body', showControls:false, autoPlay:true, loop:true, vol:50, mute:false, startAt:0, stopAt:0, opacity:1, addRaster:true, quality:'hd720', optimizeDisplay:true}"
+		></a>
+
+		<div id="enter">
+			<a href="home.html"><img border="0" src="img/sobreviento-logo.png"></a>
+		</div>
+
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mb.YTPlayer.min.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function() {
+        'use strict';
+        if(jQuery.browser.mobile)
+        {
+            document.location.href="home.html";
+        }
+        else
+        {
+            jQuery("#bgndVideo").YTPlayer({});
+        }
+    });
+</script>
+
+</body>
+</html>
